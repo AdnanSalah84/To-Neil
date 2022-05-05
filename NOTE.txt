@@ -1,0 +1,70 @@
+> dotnet new sln
+> dotnet new webapi -o API
+> dotnet sln add API
+
+> dotnet dev-certs https --trust
+
+> dotnet run
+> dotnet watch run
+
+From nuget:
+dotnet tool install --global dotnet-ef --version 6.0.2
+
+> dotnet ef migrations add InitialCreate -o Data/Migrations
+> dotnet ef database update
+> dotnet new gitignore
+> dotnet ef migrations add UserPasswordAdded
+> dotnet ef database drop
+
+In video#29 (Using HTTPS in angular - WINDOWS)
+
+In Visual Studio Code setting:
+-> exlude -> Add pattern 
+- **/obj
+- **/bin
+
+DTO (Data Object Transfer)
+
+Angular:
+> ng g -h
+> cd src/app
+> ng g c nav --skip-tests
+
+> ng g m shared --flat
+
+
+> npm outdated
+
+> ng build --prod
+
+######################
+##Publish Production##
+######################
+
+In Angular.json:
+
+"outputPath": "dist/client", to "outputPath": "../API/wwwroot",
+
+> ng build
+> ng build --prod
+
+https://docs.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli
+
+> docker run --name dev -e POSTGRES_USER=appuser -e POSTGRES_PASSWORD=Lmkr123 -p 5432:5432 -d postgres:latest
+
+https://www.pgadmin.org/download/
+
+"DefaultConnection": "Data source=datingapp.db" to "DefaultConnection": "Server=localhost; Port=5432; User Id=appuser; Password=Lmkr123; Database=datingapp"
+
+> dotnet ef migrations add PostgresInitial -o Data/Migrations
+
+Intsall heroku cli
+
+heroku dotnet buildpacks (Search it)
+
+> heroku config:set ASPNETCORE_ENVIRONMENT=Production 
+> heroku config:set TokenKey=<https://passwordsgenerator.net/> e.g YfHzFYfFBvUwxAuqND1JTWM2CZBkfn71
+> git push heroku master
+
+
+      
